@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FCA Data Analytics</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/assets/navbar.css" rel="stylesheet">
+  <style>.bk-root .bk-ui-widget-content{
+      background-image: none !important;
+      background-color: #ff9900 !important;
+      }
+      .bk-root .bk-ui-slider-vertical .bk-ui-slider-handle{
+      left: -0.24em !important;
+      margin-left: 0;
+      margin-bottom: -0.6em;
+      }
+    body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #7f7f7f;
+    background-color: #fff;
+    }
+    </style>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://www.hrforecast.de/" target="_blank">
+            <img alt="HRForecast" src="/static/assets/HRForecast_Logo.svg">
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-menu-hamburger"</a>
+              <ul class="dropdown-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/VIN">Single Case Warranty Analysis</a></li>
+                <li><a href="/GLOBAL">Global Warranty Analysis</a></li>
+              </ul>
+            </li>
+          </ul>
+          {% block search %}{% endblock %}
+
+          <div class="navbar-header navbar-right">
+            <a class="navbar-brand" href="https://www.continental-corporation.com/en" target="_blank">
+              <img alt="Continental" src="/static/assets/Continental-Logo.svg">
+            </a>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <center>
+      {% block content %}{% endblock %}
+    </center>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/assets/js/jquery.min.js"><\/script>')</script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+
+  </body>
+  </html>

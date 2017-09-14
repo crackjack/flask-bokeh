@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block search %}
+<form class="navbar-form navbar-left" method="get" action="/VIN" role="search">
+            <div class="input-group" >
+              <input type="text" class="form-control" placeholder="VIN" name="vin">
+              <span class="clear">
+                <button class="btn form-btn" type="submit"><span class="glyphicon glyphicon-menu-right white"></span></button>
+              </span>
+            </div>
+          </form>
+{% endblock %}
+{% block content %}
+  {{ script|safe }}
+{% endblock %}

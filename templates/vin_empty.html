@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block search %}
+<form class="navbar-form navbar-left" method="get" action="/VIN" role="search">
+            <div class="input-group" >
+              <input type="text" class="form-control" placeholder="VIN" name="vin">
+              <span class="clear">
+                <button class="btn form-btn" type="submit"><span class="glyphicon glyphicon-menu-right white"></span></button>
+              </span>
+            </div>
+          </form>
+{% endblock %}
+{% block content %}
+<p style="text-align: center;">Here it is possible to search for different VINs (Vehicle identification Number) to see the repair and DTC history of the vehicle as well as general information, analytics plots with respect to DTCs and parts and a geographical overview over diagnostic events.</p>
+<p style="text-align: center;">Interesting VINs could be GC303533,HR591701, HR512841, HR526221, HR511073, HR501257, HC633427, HR516718.</p>
+<p style="text-align: center;">If you are looking for boing VINs go with GC300412,GC300423.</p>
+{% endblock %}
